@@ -32,8 +32,8 @@ router.post('/login', function(req, res){
         bcrypt.compare(req.body.user.password, user.password, function(err, matches){
             if (matches) {
 
-            }
-        })
+    
+        
         let token = jwt.sign({id: user.id}, process.env.JWT_SECRET, { expiresIn: 60 * 60 * 24})
 
             res.status(200).json({
@@ -43,9 +43,13 @@ router.post('/login', function(req, res){
         })
 
         } else {
-         res.status(500).json({ error: 'User does not exist'})
+         res.status(502).json({ error: 'Login Failed'});
         }
-    })
+    });
+    } else {
+        res.status(500).json({ error: 'User does not exist'})
+    }
+})
     .catch(err => res.status(500).json({error: err }))
 });
 
