@@ -1,14 +1,14 @@
 {
-  "name": "node-modules-server",
+  "name": "workout-log-server",
   "version": "1.0.0",
-  "description": "Journal",
+  "description": "LogBook",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
     "dev": "nodemon"
   },
-  "author": "YOUR NAME HERE",
+  "author": "Stephanie Falls",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^1.19.4"
