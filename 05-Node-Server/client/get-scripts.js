@@ -45,7 +45,7 @@ function displayMine() {
                     let subtitle = document.createElement('h6')
                     let para = document.createElement('p')
                     let editBtn = document.createElement('button')
-                    let deletBtn = docu.createElement('button')
+                    let deleteBtn = document.createElement('button')
 
                     let current = response[i]
                     let title = current.title;
@@ -58,7 +58,7 @@ function displayMine() {
                     body.appendChild(subtitle)
                     body.appendChild(para)
                     body.appendChild(editBtn)
-                    body.appendChild(deletBtn)
+                    body.appendChild(deleteBtn)
 
                     card.setAttribute('id', current.id)
                     card.setAttribute('class', 'card')
@@ -72,14 +72,14 @@ function displayMine() {
                     editBtn.setAttribute('onclick', `editJournal(${current.id})`)
 
                     deleteBtn.setAttribute('class', 'btn btn-dark deleteBtn')
-                    deletBtn.setAttribute('type', 'button')
-                    deletBtn.setAttribute('onclick', `deleteJournal(${current.id})`)
+                    deleteBtn.setAttribute('type', 'button')
+                    deleteBtn.setAttribute('onclick', `deleteJournal(${current.id})`)
 
                     header.textContent = title
                     subtitle.textContent = date
                     para.textContent = entry
                     editBtn.textContent = 'Edit'
-                    deletBtn.textContent = 'Delete'
+                    deleteBtn.textContent = 'Delete'
                 }
             }
         })
@@ -161,7 +161,7 @@ function displayMine() {
     ************************** */
     function displayByTitle() {
      let journalTitle = document.getElementById('searchBar').nodeValue;
-     console.log(journalTItle)
+     console.log(journalTitle)
      fetch(`http://localhost:3000/journal/${journalTitle}`, {
          method: 'GET',
          headers: new Headers({
