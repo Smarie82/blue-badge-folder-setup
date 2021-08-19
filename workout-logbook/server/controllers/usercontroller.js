@@ -7,7 +7,7 @@ router.post('/register', function (req, res) {
 
     User.create({
         email: req.body.user.email,
-        password: bcrypt.hashSync(req.body.user.password, 15)
+        password: bcrypt.hashSync(req.body.user.password, 30)
     })
     .then(
         function createSuccess(user) {
