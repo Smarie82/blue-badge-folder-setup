@@ -3,10 +3,13 @@ import './App.css';
 // import Header from "./components/Day1/Header";
 // import AboutMe from "./components/Day1/AboutMe";
 // import Footer from "./components/Day1/Footer";
-import State from "./components/Day1/State";
-import Effect from "./components/Day1/Effect";
-import Functional from "./components/Day1/Functional";
-import TenLittleMonkeys from "./components/Day1/TenLittleMonkeys";
+// import State from "./components/Day1/State";
+// import Effect from "./components/Day1/Effect";
+// import Functional from "./components/Day1/Functional";
+// import TenLittleMonkeys from "./components/Day1/TenLittleMonkeys";
+import Example from "./components/Day3/Example";
+import Userinput from "./components/Day3/Userinput";
+import Challenge from "./components/Day3/Challenge"
 
 function App() {
   // const name = "Stephanieeeeeee";
@@ -20,23 +23,14 @@ function App() {
 
   return (
     <div className="App">
-      <State />
-      <Effect />
-      <Functional />
-      <TenLittleMonkeys />
-
-      1. Create a Functional Component called TenLittleMonkeys
-      2. Use useState to set the initial Monkey Count to 10
-      3. Display how many monkeys are left in a sentece that says the following... 
-      10 little monkeys jumping on the bed one fell off and hit his head. Mama called the doctor and the doctor said. No more monkeys jumping on the bed!
-      4. Once the count gets to zero display "All the Monkeys fell off"
-      5. Button clicking should take 1 away from the total monkey counter   
-     
+      <Example/>
+      <Userinput/>
+      <Challenge/>
     </div>
   );
 }
 
-//npm start - the only command we will run 8/10/21
+//npm start to run the terminal
 export default App;
 
 
